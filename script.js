@@ -4,16 +4,16 @@ class Raindrop {
     $('.drop').eq(this.id).animate({
       x: x,
       width: width, 
-      height: height
+      height: height,
+      y: -100
     }, 0);
-    $('.drop').eq(this.id).stop();
     this.animationSpeed = animationSpeed;
   }
   
   resetDrop() {
     console.log('reset');
     $('.drop').eq(this.id).animate({
-      y: '0'
+      y: -100
     }, 0);
   }
   
@@ -27,15 +27,15 @@ class Raindrop {
 };
 
 $( document ).ready(function() {
+  
+  allDrops = [];
+  
   for (let i = 0; i < $('.drop').length; i++) {
-    drop = new Raindrop(i, 7, 30, 500, 4000);
+    drop = new Raindrop(i, 12, 60, (i * 100), 4000);
+    allDrops.push(drop);
+    setInterval(function() {
+      allDrops[i].animate();
+      allDrops[i].resetDrop();
+    }, allDrops[i].animationSpeed);
   }
-  
-  r = new Raindrop(0, 7, 30, 500, 4000);
-  
-  setInterval(function() {
-    r.animate();
-    r.resetDrop();
-  }, r.animationSpeed);
-  
 });
