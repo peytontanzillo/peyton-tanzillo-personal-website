@@ -85,6 +85,10 @@
   z-index: 4;
 }
 
+.drop {
+  fill: rgba(0, 80, 80, .5);
+}
+
 #raindrops {
   position: relative;
   z-index: 3;
