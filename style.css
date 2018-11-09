@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Slab', serif;
+}
+
+.header {
+  height: 50px;
+  background-color: #222;
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  z-index: 10;
+}
+
+.header > * {
+  display: inline-block;
+  margin: 19px 80px;
+  font-weight: 100;
+  color: white;
+}
+
+#logo {
+  display: inline-block;
+  float: left;
+  margin: 19px 80px;
+  font-size: 30px;
+  font-weight: 100;
+  color: white;
+}
+
+.cover {
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  z-index: 1;
+}
+
+.teal-overlay {
+  background-color: rgba(0, 139, 139, .6);
+  z-index: 2;
+}
+
+.start-image {
+  background: url('https://images.pexels.com/photos/355747/pexels-photo-355747.jpeg') no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 1;
+}
+
+#main-text {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
