@@ -4,6 +4,12 @@
   font-family: 'Roboto Slab', serif;
 }
 
+/* ================
+CSS for Cover Page
+================ */
+
+/* ---CSS for Navbar--- */
+
 .header {
   height: 50px;
   background-color: #222;
@@ -53,6 +59,7 @@
   cursor: pointer;
 }
 
+/* ---CSS for Cover itself--- */
 
 .cover {
   top: 0px;
@@ -73,6 +80,8 @@
   background-size: cover;
   z-index: 1;
 }
+
+/* ---CSS for text on cover--- */
 
 #cover-content {
   position: absolute;
@@ -110,6 +119,8 @@
   z-index: 4;
 }
 
+/* ---CSS for rain on cover--- */
+
 .drop {
   fill: rgba(0, 80, 80, .5);
 }
@@ -117,5 +128,32 @@
 #raindrops {
   position: relative;
   z-index: 3;
+}
+
+/* ================
+CSS for About Page
+================ */
+
+#about {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+#title-image {
+  width: 100%;
+  background-color: #222;
+  height: 33%;
+  position: relative;
+}
+
+#about-title {
+  position: absolute;
+  display: inline-block;
+  color: white;
+  font-size: 1000%;
+  bottom: -20%; 
+  right: 0;
 }
 
