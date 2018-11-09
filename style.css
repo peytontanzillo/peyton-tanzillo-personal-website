@@ -55,21 +55,26 @@
   z-index: 3;
   top: 40%;
   left: 50%;
+  width: 800px;
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 
 #main-text {
+  position: relative;
   font-size: 60px;
   color: white;
   background-color: #222;
   padding: 20px;
   text-align: center;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  z-index: 4;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  z-index: 5;
 }
 
 #sub-text {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  position: relative;
   font-size: 30px;
   color: #222;
   background-color: white;
@@ -77,6 +82,6 @@
   text-align: center;
   width: 50%;
   float: right;
-  z-index: 1;
+  z-index: 3;
 }
 
