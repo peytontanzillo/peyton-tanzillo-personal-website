@@ -11,14 +11,12 @@ class Raindrop {
   }
   
   resetDrop() {
-    console.log('reset');
     $('.drop').eq(this.id).animate({
       y: -100
     }, 0);
   }
   
   animate() {
-    console.log('animate');
     $('.drop').eq(this.id).animate({
       y: '2000'
     }, this.animationSpeed);
@@ -31,7 +29,11 @@ $( document ).ready(function() {
   allDrops = [];
   
   for (let i = 0; i < $('.drop').length; i++) {
-    drop = new Raindrop(i, 12, 60, (i * 100), 4000);
+    const width = (6 * Math.random()) + 6;
+    const height = (30 * Math.random()) + 40;
+    const position = (($(document).width() + (2 * width)) * Math.random());
+    const animationSpeed = (2000 * Math.random()) + 2000;
+    const drop = new Raindrop(i, width, height, position, animationSpeed);
     allDrops.push(drop);
     setInterval(function() {
       allDrops[i].animate();
