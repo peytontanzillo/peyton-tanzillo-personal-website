@@ -186,6 +186,7 @@ CSS for About Page
   background-color: #222;
   height: 200px;
   position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
 #pt-image {
@@ -292,7 +293,7 @@ CSS for About Page
   text-decoration: none;
 }
 
-.job-time {
+.job-title {
   position: relative;
   display: inline-block;
   font-weight: 100;
@@ -300,9 +301,22 @@ CSS for About Page
   text-align: right;
 }
 
-.job-title {
+.job-extra {
   color: rgb(0, 160, 160);
   padding: 10px;
   padding-top: 0;
+}
+
+.teal-header {
+  background-color: rgb(0, 160, 160);
+  height: 50px;
+  padding-bottom: 2px;
+  padding-left: 20px;
+  MARGIN-TOP: 20px;
+  color: white;
+}
+
+.teal-header > h2 {
+  font-size: 50px;
 }
 
