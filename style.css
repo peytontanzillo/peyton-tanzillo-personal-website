@@ -277,7 +277,7 @@ CSS for About Page
   right: 0;
 }
 
-.about-row {
+.row {
   width: 100%;
   display: inline-flex;
   padding: 0 10px;
@@ -307,8 +307,8 @@ CSS for About Page
   padding-top: 0;
 }
 
-.teal-header {
-  background-color: rgb(0, 160, 160);
+.small-header {
+  background-color: #222;
   height: 50px;
   padding-bottom: 2px;
   padding-left: 20px;
@@ -316,7 +316,57 @@ CSS for About Page
   color: white;
 }
 
-.teal-header > h2 {
+.small-header > h2 {
   font-size: 50px;
 }
 
+.skill {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 10px 0px;
+  border-bottom: 1px dotted white;
+}
+
+.skill-name {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 50%;
+  font-size: 20px;
+}
+
+.skill-bar {
+  display: inline-block;
+  background-color: white;
+  width: 40%;
+  height: 19px;
+  float: right;
+  border: 3px solid white;
+}
+
+.skill-full {
+  display: inline-block;
+  background-color: rgb(0, 160, 160);
+  height: 19px;
+  float: left;
+}
+
+.twenty-pct {
+  width: 20%;
+}
+
+.fourty-pct {
+  width: 40%;
+}
+
+.sixty-pct {
+  width: 60%;
+}
+
+.eighty-pct {
+  width: 80%;
+}
+
+.hundred-pct {
+  width: 100%;
+}
