@@ -26,20 +26,7 @@ class Raindrop {
 
 $( document ).ready(function() {
   
-  allDrops = [];
-  
-  for (let i = 0; i < $('.drop').length; i++) {
-    const width = (6 * Math.random()) + 6;
-    const height = (30 * Math.random()) + 40;
-    const position = (($(document).width() + (2 * width)) * Math.random());
-    const animationSpeed = (2000 * Math.random()) + 2000;
-    const drop = new Raindrop(i, width, height, position, animationSpeed);
-    allDrops.push(drop);
-    setInterval(function() {
-      allDrops[i].animate();
-      allDrops[i].resetDrop();
-    }, allDrops[i].animationSpeed);
-  }
+  makeRain();
   
   setInterval(function() {
     $('#down-arrow').animate({
@@ -55,8 +42,29 @@ $( document ).ready(function() {
   $('.scroll-to-id').click(function() {
     const correctID = this.id.split("-");
     $('html, body').animate({
-      scrollTop: $(correctID[1]).position().top
+      scrollTop: $(correctID[1]).position().top + $(window).height()
     }, 800);
-    console.log($(correctID[1]).position());
+  });
+  
+  $(window).resize(function() {
+    makeRain();
+    console.log('reset')
   });
 });
+
+function makeRain() {
+  allDrops = [];
+  
+  for (let i = 0; i < $('.drop').length; i++) {
+    const width = (6 * Math.random()) + 6;
+    const height = (30 * Math.random()) + 40;
+    const position = (($(window).width() + (2 * width)) * Math.random());
+    const animationSpeed = (2000 * Math.random()) + 2000;
+    const drop = new Raindrop(i, width, height, position, animationSpeed);
+    allDrops.push(drop);
+    setInterval(function() {
+      allDrops[i].animate();
+      allDrops[i].resetDrop();
+    }, allDrops[i].animationSpeed);
+  }
+}

@@ -41,7 +41,7 @@ CSS for Cover Page
   display: inline-block;
   float: right;
   margin: 0;
-  padding: 19px 80px 0 0;
+  padding: 0px 80px 0 0;
 }
 
 .header-links > a {
@@ -54,7 +54,7 @@ CSS for Cover Page
   text-decoration: none;
   display: inline-block;
   font-size: 20px;
-  padding: 29px 10px 1px 20px;
+  padding: 29px 10px 1px 10px;
   height: 20px;
   bottom: 0;
   -webkit-transition: .3s; /* Safari */
@@ -170,7 +170,7 @@ CSS for Cover Page
 CSS for About Page
 ================ */
 
-#about {
+#after-cover {
   position: absolute;
   top: 100%;
   width: 100%;
@@ -181,7 +181,7 @@ CSS for About Page
   transition: .3s;
 }
 
-#title-image {
+.title-band {
   width: 100%;
   background-color: #222;
   height: 200px;
@@ -195,14 +195,21 @@ CSS for About Page
   border: 1px solid #222;
 }
 
-#about-title {
+.title {
   position: absolute;
   display: inline-block;
   color: white;
   font-size: 1000%;
   bottom: -43px; 
-  right: 80px;
   font-weight: 400;
+}
+
+.title-right {
+  right: 80px;
+}
+
+.title-left {
+  left: 80px;
 }
 
 .next-to-image {
@@ -221,7 +228,7 @@ CSS for About Page
 }
 
 .content-container {
-  padding: 10px 175px;
+  padding: 40px 175px;
 }
 
 .content-box-text {
@@ -283,5 +290,19 @@ CSS for About Page
   border-radius: .5em;
   cursor: pointer;
   text-decoration: none;
+}
+
+.job-time {
+  position: relative;
+  display: inline-block;
+  font-weight: 100;
+  font-size: 20px;
+  text-align: right;
+}
+
+.job-title {
+  color: rgb(0, 160, 160);
+  padding: 10px;
+  padding-top: 0;
 }
 
