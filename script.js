@@ -40,4 +40,17 @@ $( document ).ready(function() {
       allDrops[i].resetDrop();
     }, allDrops[i].animationSpeed);
   }
+  
+  setInterval(function() {
+    $('#down-arrow').animate({
+      margin: '6px 0px'
+    }, 1000);
+    setTimeout(function() {
+      $('#down-arrow').animate({
+        margin: '-6px 0px'
+      }, 1000);
+    }, 1000);
+  }, 2000);
+  
+  
 });

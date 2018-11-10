@@ -17,6 +17,7 @@ CSS for Cover Page
   text-align: center;
   position: fixed;
   z-index: 10;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
 .header > * {
@@ -31,7 +32,7 @@ CSS for Cover Page
   float: left;
   margin: 19px 80px;
   font-size: 30px;
-  font-weight: 100;
+  font-weight: 400;
   color: white;
 }
 
@@ -40,6 +41,7 @@ CSS for Cover Page
   display: inline-block;
   float: right;
   margin: 0;
+  padding: 0px 80px;
 }
 
 .header-links > li {
@@ -75,7 +77,7 @@ CSS for Cover Page
 }
 
 .start-image {
-  background: url('https://images.pexels.com/photos/355747/pexels-photo-355747.jpeg') no-repeat;
+  background: url('Content/cover-image.jpeg') no-repeat;
   background-position: center;
   background-size: cover;
   z-index: 1;
@@ -130,6 +132,34 @@ CSS for Cover Page
   z-index: 3;
 }
 
+/* ---CSS for down arrow--- */
+
+#down-arrow {
+  position: absolute;
+  max-width: 50px;
+  max-height: 50px; 
+  padding: 10px 25px;
+  z-index: 6;
+}
+
+#down-arrow-box {
+  position: absolute;
+  display: inline-block;
+  background-color: #222;
+  height: 70px;
+  width: 100px;
+  bottom: 0;
+  margin: 0px 80px;
+  z-index: 5;
+}
+
+#down-arrow-box:hover {
+  background-color: rgb(0, 139, 139);
+  -webkit-transition: .3s; /* Safari */
+  transition: .3s;
+  cursor: pointer;
+}
+
 /* ================
 CSS for About Page
 ================ */
@@ -138,14 +168,24 @@ CSS for About Page
   position: absolute;
   top: 100%;
   width: 100%;
-  height: 100%;
 }
 
 #title-image {
   width: 100%;
   background-color: #222;
-  height: 33%;
+  height: 200px;
   position: relative;
+}
+
+#pt-image {
+  position: absolute;
+  display: inline-block;
+  max-height: 160px;
+  max-width: 160px;
+  left: 80px;
+  padding: 20px;
+  border-radius: 50%;
+  float: right; 
 }
 
 #about-title {
@@ -153,7 +193,8 @@ CSS for About Page
   display: inline-block;
   color: white;
   font-size: 1000%;
-  bottom: -20%; 
-  right: 0;
+  bottom: -43px; 
+  right: 80px;
+  font-weight: 100;
 }
 
