@@ -195,6 +195,22 @@ CSS for About Page
   font-size: 1000%;
   bottom: -43px; 
   right: 80px;
-  font-weight: 100;
+  font-weight: 400;
+}
+
+.content-header {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 30px;
+}
+
+.content-container {
+  padding: 30px 180px;
+}
+
+.content-box {
+  background-color: #eee;
+  color: #222;
+  padding: 30px;
 }
 
