@@ -202,15 +202,38 @@ CSS for About Page
   font-family: "Playfair Display", serif;
   font-style: italic;
   font-size: 30px;
+  margin: 10px;
+  border-bottom: 1px solid #222;
 }
 
 .content-container {
-  padding: 30px 180px;
+  padding: 10px 175px;
 }
 
-.content-box {
+.content-box-text {
+  box-sizing:border-box
   background-color: #eee;
   color: #222;
   padding: 30px;
+  position: relative;
+  width: 100%;
+}
+
+.content-box {
+  padding: 10px;
+}
+
+.half {
+  width: 42%;
+}
+
+.right {
+  right: 0;
+}
+
+.about-row {
+  width: 100%;
+  display: inline-flex;
+  padding: 15px;
 }
 
