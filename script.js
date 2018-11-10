@@ -50,7 +50,13 @@ $( document ).ready(function() {
         margin: '-6px 0px'
       }, 1000);
     }, 1000);
-  }, 2000);
+  }, 2000); 
   
-  
+  $('.scroll-to-id').click(function() {
+    const correctID = this.id.split("-");
+    $('html, body').animate({
+      scrollTop: $(correctID[1]).position().top
+    }, 800);
+    console.log($(correctID[1]).position());
+  });
 });
