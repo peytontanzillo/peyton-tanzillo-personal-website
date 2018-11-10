@@ -30,7 +30,7 @@ CSS for Cover Page
 #logo {
   display: inline-block;
   float: left;
-  margin: 19px 80px;
+  margin: 19px 0 19px 80px;
   font-size: 30px;
   font-weight: 400;
   color: white;
@@ -41,7 +41,7 @@ CSS for Cover Page
   display: inline-block;
   float: right;
   margin: 0;
-  padding: 0px 80px;
+  padding: 19px 80px 0 0;
 }
 
 .header-links > a {
@@ -54,7 +54,7 @@ CSS for Cover Page
   text-decoration: none;
   display: inline-block;
   font-size: 20px;
-  padding: 29px 20px 1px 20px;
+  padding: 29px 10px 1px 20px;
   height: 20px;
   bottom: 0;
   -webkit-transition: .3s; /* Safari */
@@ -189,14 +189,10 @@ CSS for About Page
 }
 
 #pt-image {
-  position: absolute;
   display: inline-block;
-  max-height: 160px;
-  max-width: 160px;
-  left: 80px;
-  padding: 20px;
-  border-radius: 50%;
-  float: right; 
+  max-height: 180px;
+  max-width: 180px;
+  border: 1px solid #222;
 }
 
 #about-title {
@@ -207,6 +203,13 @@ CSS for About Page
   bottom: -43px; 
   right: 80px;
   font-weight: 400;
+}
+
+.next-to-image {
+  display: inline-block;
+  float: right;
+  width: 100%;
+  padding: 20px;
 }
 
 .content-header {
@@ -222,7 +225,8 @@ CSS for About Page
 }
 
 .content-box-text {
-  box-sizing:border-box;
+  display: inline-flex;
+  box-sizing: border-box;
   background-color: #eee;
   color: #222;
   padding: 30px;
@@ -232,6 +236,7 @@ CSS for About Page
 }
 
 .dark {
+  display: block;
   background-color: #222;
   color: white;
 }
@@ -267,6 +272,16 @@ CSS for About Page
 .about-row {
   width: 100%;
   display: inline-flex;
-  padding: 0 15px;
+  padding: 0 10px;
+}
+
+.default-button {
+  background-color: rgb(0, 160, 160);
+  color: white;
+  padding: .5em;
+  font-size: 15px;
+  border-radius: .5em;
+  cursor: pointer;
+  text-decoration: none;
 }
 
