@@ -50,6 +50,16 @@ $( document ).ready(function() {
     makeRain();
     console.log('reset')
   });
+  
+  $('.skill-full').hide();
+  let hasAnimatedSkills = false;
+  
+  $(document).scroll(function() {
+    if ($(document).scrollTop() >= ($('#skills').position().top + $(window).height()) && !hasAnimatedSkills) {
+      hasAnimatedSkills = true;
+      $('.skill-full').toggle('slide');
+    }
+  });
 });
 
 function makeRain() {

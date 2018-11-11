@@ -370,3 +370,60 @@ CSS for About Page
 .hundred-pct {
   width: 100%;
 }
+
+.contact-band {
+  background-color: #222;
+}
+
+.contact-end {
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+
+.contact-end > a {
+  color: rgb(0, 160, 160);
+}
+
+.icon-box {
+  padding: 10px;
+  display: block;
+  align-content: center;
+  text-align: center;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.icon {
+  width: 70%;
+  max-height: 140px;
+  display: inline-flex;
+}
+
+.icon-subhead {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 25px;
+  color: rgb(0, 160, 160);
+  text-align: center;
+}
+
+.icon-text {
+  font-size: 15px;
+  color: white;
+  text-align: center;
+}
+
+.icon-text > a {
+  color: white;
+}
+
+.fourth {
+  width: 25%;
+}
+
+.icon-row {
+  border-bottom: 1px dashed white;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
