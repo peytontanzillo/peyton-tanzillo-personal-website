@@ -176,10 +176,7 @@ CSS for About Page
   width: 100%;
 }
 
-#about:target {
-  -webkit-transition: .3s; /* Safari */
-  transition: .3s;
-}
+/* ---CSS for title bands--- */
 
 .title-band {
   width: 100%;
@@ -187,13 +184,6 @@ CSS for About Page
   height: 200px;
   position: relative;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
-}
-
-#pt-image {
-  display: inline-block;
-  max-height: 180px;
-  max-width: 180px;
-  border: 1px solid #222;
 }
 
 .title {
@@ -213,9 +203,16 @@ CSS for About Page
   left: 80px;
 }
 
+/* ---CSS for content itself (including support for image)--- */
+
+#pt-image {
+  max-height: 180px;
+  max-width: 180px;
+  border: 1px solid #222;
+  margin: 15px;
+}
+
 .next-to-image {
-  display: inline-block;
-  float: right;
   width: 100%;
   padding: 20px;
 }
@@ -229,19 +226,32 @@ CSS for About Page
 }
 
 .content-container {
-  padding: 40px 175px;
+  padding: 40px 160px;
 }
 
 .content-box-text {
-  display: inline-flex;
   box-sizing: border-box;
   background-color: #eee;
   color: #222;
   padding: 30px;
   position: relative;
   width: 100%;
-  height: 80%;
+  height: 85%;
 }
+
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.content-box {
+  padding: 10px;
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+/* ---CSS for Background / Education--- */
 
 .dark {
   display: block;
@@ -265,9 +275,6 @@ CSS for About Page
   float: right;
 }
 
-.content-box {
-  padding: 10px;
-}
 
 .half {
   width: 50%;
@@ -279,8 +286,10 @@ CSS for About Page
 
 .row {
   width: 100%;
-  display: inline-flex;
+  display: flex;
+  flex-wrap: wrap;
   padding: 0 10px;
+  align-content: stretch;
 }
 
 .default-button {
@@ -291,6 +300,8 @@ CSS for About Page
   border-radius: .5em;
   cursor: pointer;
   text-decoration: none;
+  height: 20px;
+  margin: 13px;
 }
 
 .job-title {
@@ -321,7 +332,6 @@ CSS for About Page
 }
 
 .skill {
-  display: inline-block;
   box-sizing: border-box;
   width: 100%;
   margin: 10px 0px;
@@ -338,7 +348,7 @@ CSS for About Page
 .skill-bar {
   display: inline-block;
   background-color: white;
-  width: 40%;
+  width: 45%;
   height: 19px;
   float: right;
   border: 3px solid white;
@@ -412,6 +422,7 @@ CSS for About Page
   font-size: 15px;
   color: white;
   text-align: center;
+  word-wrap: break-word;
 }
 
 .icon-text > a {

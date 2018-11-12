@@ -48,7 +48,6 @@ $( document ).ready(function() {
   
   $(window).resize(function() {
     makeRain();
-    console.log('reset')
   });
   
   $('.skill-full').hide();
