@@ -2,7 +2,7 @@ class Raindrop {
   constructor(id, width, height, x, animationSpeed) {
     this.id = id;
     
-    $('.drop').eq(this.id).css({width: width, height: height});
+    $('.drop').eq(this.id).css({position: 'absolute', width: width, height: height});
     $('.drop').eq(this.id).offset({top: -100, left: x});
     this.animationSpeed = animationSpeed;
   }
@@ -22,6 +22,8 @@ class Raindrop {
 };
 
 $( document ).ready(function() {
+  
+  createRainDivs();
   
   makeRain();
   
@@ -58,18 +60,20 @@ $( document ).ready(function() {
   });
 });
 
-function makeRain() {
-  allDrops = [];
-  
-  for (i = 0; i < 200; i++) {
+function createRainDivs() {
+  for (i = 0; i < 150; i++) {
     $('#raindrops').append("<div class=\"drop\"></div>");
   }
+}
+
+function makeRain() {
+  allDrops = [];
   
   for (let i = 0; i < $('.drop').length; i++) {
     const width = (6 * Math.random()) + 6;
     const height = (30 * Math.random()) + 40;
     const position = (($(window).width() + (2 * width)) * Math.random());
-    const animationSpeed = (3000 * Math.random()) + 3000;
+    const animationSpeed = (2000 * Math.random()) + 2000;
     const drop = new Raindrop(i, width, height, position, animationSpeed);
     allDrops.push(drop);
     setInterval(function() {

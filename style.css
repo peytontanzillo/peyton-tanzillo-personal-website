@@ -75,6 +75,7 @@ CSS for Cover Page
   height: 100%;
   display: block;
   position: absolute;
+  overflow: hidden;
 }
 
 .teal-overlay {
