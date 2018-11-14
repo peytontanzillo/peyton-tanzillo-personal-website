@@ -1,20 +1,19 @@
 class Raindrop {
-  constructor(id, width, height, x, animationSpeed) {
-    this.id = id;
-    
-    $('.drop').eq(this.id).css({position: 'absolute', width: width, height: height});
-    $('.drop').eq(this.id).offset({top: -100, left: x});
+  constructor(drop, width, height, x, animationSpeed) {
+    this.drop = drop;
+    this.drop.css({position: 'absolute', width: width, height: height});
+    this.drop.offset({top: -100, left: x});
     this.animationSpeed = animationSpeed;
   }
   
   resetDrop() {
-    $('.drop').eq(this.id).animate({
+    this.drop.animate({
       top: '-100'
     }, 0);
   }
   
   animate() {
-    $('.drop').eq(this.id).animate({
+    this.drop.animate({
       top: '2000'
     }, this.animationSpeed);
   }
@@ -61,7 +60,7 @@ $( document ).ready(function() {
 });
 
 function createRainDivs() {
-  for (i = 0; i < 150; i++) {
+  for (i = 0; i < 50; i++) {
     $('#raindrops').append("<div class=\"drop\"></div>");
   }
 }
@@ -74,7 +73,7 @@ function makeRain() {
     const height = (30 * Math.random()) + 40;
     const position = (($(window).width() + (2 * width)) * Math.random());
     const animationSpeed = (2000 * Math.random()) + 2000;
-    const drop = new Raindrop(i, width, height, position, animationSpeed);
+    const drop = new Raindrop($('.drop').eq(i), width, height, position, animationSpeed);
     allDrops.push(drop);
     setInterval(function() {
       allDrops[i].animate();
