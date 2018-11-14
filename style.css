@@ -54,7 +54,7 @@ CSS for Cover Page
   text-decoration: none;
   display: inline-block;
   font-size: 20px;
-  padding: 29px 10px 1px 10px;
+  padding: 29px 10px 8px 10px;
   height: 20px;
   bottom: 0;
   -webkit-transition: .3s; /* Safari */
@@ -221,7 +221,6 @@ CSS for About Page
 .next-to-image {
   width: 100%;
   padding: 20px;
-  align-content: center;
 }
 
 .content-header {
@@ -240,7 +239,6 @@ CSS for About Page
 }
 
 .content-box-text {
-  display: flex;
   box-sizing: border-box;
   background-color: #eee;
   color: #222;
@@ -251,7 +249,10 @@ CSS for About Page
 }
 
 .image-container {
+  display: relative;
   width: 215px;
+  float: left;
+  padding-bottom: 10px;
 }
 
 .button-row {
@@ -266,7 +267,7 @@ CSS for About Page
   flex-basis: 0;
   flex-grow: 1;
   overflow: hidden;
-  flex: 450px;
+  flex: 380px;
 }
 
 /* ---CSS for Background / Education--- */
@@ -291,11 +292,6 @@ CSS for About Page
 
 .val {
   float: right;
-}
-
-
-.half {
-  width: 50%;
 }
 
 .right {
@@ -416,18 +412,17 @@ CSS for About Page
 }
 
 .icon-box {
-  padding: 10px;
-  display: block;
-  align-content: center;
+  padding: 10px 0px;
   text-align: center;
-  position: relative;
-  box-sizing: border-box;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex: 225px;
 }
 
 .icon {
-  width: 70%;
-  max-height: 140px;
-  display: inline-flex;
+  width: 120px;
+  height: 120px;
+  justify-content: center;
 }
 
 .icon-subhead {
@@ -435,7 +430,7 @@ CSS for About Page
   font-style: italic;
   font-size: 25px;
   color: rgb(0, 160, 160);
-  text-align: center;
+  justify-content: center;
 }
 
 .icon-text {
@@ -459,6 +454,84 @@ CSS for About Page
   margin-bottom: 30px;
 }
 
+.icon-sub-row {
+  flex-basis: 0;
+  flex-grow: 1;
+  flex: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: stretch;
+}
+
 .footer {
   background-color: #222;
+}
+
+@media only screen
+  and (max-width: 1150px) {
+    
+  .content-container {
+    padding: 40px 120px;
+  }
+    
+  .title {
+    font-size: 100px;
+    bottom: -27px; 
+  }
+    
+  .title-band {
+    height: 150px;
+  }
+    
+  .icon-subhead {
+    font-size: 17px;
+  }
+    
+}
+
+@media only screen
+  and (max-width: 900px) {
+    
+  .content-container {
+    padding: 40px 100px;
+  }
+    
+  #logo {
+    margin: 19px 0 19px 40px;
+  }
+    
+  .header-links {
+    padding: 0px 40px 0 0;
+  }
+    
+  .header-links > a > li {
+    font-size: 15px;
+    padding: 34px 10px 0px 10px;
+    margin-bottom: -40px;
+  }
+    
+  #cover-content {
+    width: 500px;
+  }
+    
+  #main-text {
+    font-size: 40px;
+  }
+
+  #sub-text {
+    font-size: 20px;
+  }
+    
+  .content-header {
+    font-size: 24px;
+  }
+    
+  .job-title {
+    font-size: 14px;
+  }
+    
+  .icon-text {
+    font-size: 12px;
+  }
+    
 }
