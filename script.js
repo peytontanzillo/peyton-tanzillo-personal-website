@@ -74,7 +74,7 @@ $(document).ready(() => {
     }, DOWN_ARROW_INTERVAL);
   }, 2 * DOWN_ARROW_INTERVAL);
 
-  $('.scroll-to-id').click(() => {
+  $('.scroll-to-id').click(function() { // eslint-disable-line func-names
     const correctID = this.id.split('-');
     $('html, body').animate({scrollTop: $(correctID[1]).position().top + $(window).height()}, SECTION_SCROLL_SPEED);
   });
