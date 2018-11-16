@@ -467,8 +467,7 @@ CSS for About Page
   background-color: #222;
 }
 
-@media only screen
-  and (max-width: 1150px) {
+@media (max-width: 1150px) {
     
   .content-container {
     padding: 40px 120px;
@@ -489,8 +488,7 @@ CSS for About Page
     
 }
 
-@media only screen
-  and (max-width: 900px) {
+@media (max-width: 900px) {
     
   .content-container {
     padding: 40px 100px;
@@ -532,6 +530,39 @@ CSS for About Page
     
   .icon-text {
     font-size: 12px;
+  }  
+}
+
+@media (max-width: 720px) {
+    
+  .cover {
+    height: 50%;
+  }
+    
+  #after-cover {
+    top: 50%;
+  }
+    
+  .content-container {
+    padding: 40px 80px;
+  }
+    
+  .title {
+    font-size: 70px;
+    bottom: -19px; 
+  }
+    
+  .title-band {
+    height: 90px;
+  }
+    
+  .header-links {
+    display: none;
+  }
+    
+  #logo {
+    font-size: 25px;
+    margin: 24px 0 19px 40px;
   }
     
 }

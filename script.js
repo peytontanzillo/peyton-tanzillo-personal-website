@@ -87,7 +87,7 @@ $(document).ready(() => {
   let hasAnimatedSkills = false;
 
   $(document).scroll(() => {
-    if ($(document).scrollTop() >= ($('#skills').position().top + $(window).height()) && !hasAnimatedSkills) {
+    if (($(document).scrollTop() >= ($('#skills').position().top + $(window).height()) || $(document).scrollTop() + $(window).height() >= $('#contact').position().top + $(window).height()) && !hasAnimatedSkills) {
       hasAnimatedSkills = true;
       $('.skill-full').toggle('slide');
     }
