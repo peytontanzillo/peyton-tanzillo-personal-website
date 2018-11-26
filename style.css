@@ -22,40 +22,60 @@ CSS for Cover Page
 
 .header > * {
   display: inline-block;
-  margin: 19px 80px;
-  font-weight: 100;
+  margin: 80px;
+  font-weight: 400; 
+  color: white;
+}
+
+.logo-box {
+  display: flex;
+  float: left;
+  height: 100%;
+  margin: 0 0 0 80px;
+  font-size: 25px;
+  font-weight: 700;
   color: white;
 }
 
 #logo {
-  display: inline-block;
-  float: left;
-  margin: 19px 0 19px 80px;
-  font-size: 30px;
-  font-weight: 400;
-  color: white;
+  margin: auto;
+  text-align: center;
+}
+
+.header-links-box {
+  display: flex;
+  float: right;
+  margin: 0;
+  padding: 0px 80px 0 0;
+  box-sizing: border-box;
+  height: 100%;
 }
 
 .header-links {
   text-decoration: none;
   display: inline-block;
-  float: right;
-  margin: 0;
-  padding: 0px 80px 0 0;
+  height: 100%;
+  text-align: center;
 }
 
 .header-links > a {
+  display: inline-flex;
   color: white;
   -webkit-transition: .3s; /* Safari */
   transition: .3s;
+  height: 100%;
 }
 
 .header-links > a > li {
+  margin: auto;
+  text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 20px;
-  padding: 29px 10px 8px 10px;
-  height: 20px;
+  padding: 13px 10px 0 10px;
+  margin: 0 0 -15px 0;
+  box-sizing: border-box;
+  height: 100%;
   bottom: 0;
   -webkit-transition: .3s; /* Safari */
   transition: .3s;
@@ -84,7 +104,7 @@ CSS for Cover Page
 }
 
 .start-image {
-  background: url('Content/cover-image.jpeg') no-repeat;
+  background: url('Content/bushbanner.jpg') no-repeat;
   background-position: center;
   background-size: cover;
   z-index: 1;
@@ -185,6 +205,7 @@ CSS for About Page
 /* ---CSS for title bands--- */
 
 .title-band {
+  display: flex;
   width: 100%;
   background-color: #222;
   height: 200px;
@@ -196,8 +217,11 @@ CSS for About Page
   position: absolute;
   display: inline-block;
   color: white;
+  top: 0;
+  height: 100%;
+  margin: auto;
+  text-align: center;
   font-size: 1000%;
-  bottom: -43px; 
   font-weight: 400;
 }
 
@@ -212,15 +236,16 @@ CSS for About Page
 /* ---CSS for content itself (including support for image)--- */
 
 #pt-image {
-  max-height: 180px;
-  max-width: 180px;
+  max-height: 188px;
+  max-width: 188px;
   border: 1px solid #222;
-  margin: 15px;
+  margin: 20px;
+  margin-left: 0;
 }
 
 .next-to-image {
   width: 100%;
-  padding: 20px;
+  padding: 20px 0px;
 }
 
 .content-header {
@@ -240,6 +265,7 @@ CSS for About Page
 
 .content-box-text {
   box-sizing: border-box;
+  font-size: 18px;
   background-color: #eee;
   color: #222;
   padding: 30px;
@@ -248,11 +274,33 @@ CSS for About Page
   height: 100%;
 }
 
+.content-box-text > ul {
+  padding-left: 20px;
+}
+
+#about-me-box {
+  padding-top: 0;
+}
+
+#view-recent {
+  font-size: 18px;
+  text-align: center;
+  font-weight: 800;
+  margin: 10px;
+  padding: 10px;
+  background-color: rgb(0, 160, 160);
+  color: white;
+  width: 100%;
+}
+
+#view-recent > .default-button {
+  background-color: white;
+  color: #222;
+}
+
 .image-container {
   display: relative;
-  width: 215px;
   float: left;
-  padding-bottom: 10px;
 }
 
 .button-row {
@@ -267,7 +315,7 @@ CSS for About Page
   flex-basis: 0;
   flex-grow: 1;
   overflow: hidden;
-  flex: 380px;
+  flex: 395px;
 }
 
 /* ---CSS for Background / Education--- */
@@ -334,6 +382,7 @@ CSS for About Page
 }
 
 .small-header {
+  display: flex;
   background-color: #222;
   height: 50px;
   padding-bottom: 2px;
@@ -343,8 +392,14 @@ CSS for About Page
   width: 100%;
 }
 
-.small-header > h2 {
-  font-size: 50px;
+.small-header-text {
+  float: left;
+  font-size: 25px;
+}
+
+.small-header-text > h2 {
+  margin: auto;
+  text-align: center;
 }
 
 .skill {
@@ -494,18 +549,16 @@ CSS for About Page
     padding: 40px 100px;
   }
     
-  #logo {
-    margin: 19px 0 19px 40px;
+  .logo-box {
+    margin: 0 0 0 40px;
   }
     
-  .header-links {
+  .header-links-box {
     padding: 0px 40px 0 0;
   }
     
   .header-links > a > li {
     font-size: 15px;
-    padding: 34px 10px 0px 10px;
-    margin-bottom: -40px;
   }
     
   #cover-content {

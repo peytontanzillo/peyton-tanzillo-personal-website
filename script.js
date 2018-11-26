@@ -15,6 +15,8 @@ const DOWN_ARROW_INTERVAL = 1000;
 
 const SECTION_SCROLL_SPEED = 800;
 
+const HEADER_HEIGHT = 50;
+
 class Raindrop {
   constructor(drop, width, height, x, animationSpeed) {
     this.drop = drop;
@@ -63,9 +65,9 @@ function makeRain() {
 }
 
 $(document).ready(() => {
-  createRainDivs();
-
-  makeRain();
+//  createRainDivs();
+//
+//  makeRain();
 
   setInterval(() => {
     $('#down-arrow').animate({margin: '6px 0px'}, DOWN_ARROW_INTERVAL);
@@ -76,12 +78,12 @@ $(document).ready(() => {
 
   $('.scroll-to-id').click(function() { // eslint-disable-line func-names
     const correctID = this.id.split('-');
-    $('html, body').animate({scrollTop: $(correctID[1]).position().top + $(window).height()}, SECTION_SCROLL_SPEED);
+    $('html, body').animate({scrollTop: $(correctID[1]).position().top + $(window).height() - HEADER_HEIGHT}, SECTION_SCROLL_SPEED);
   });
 
-  $(window).resize(() => {
-    makeRain();
-  });
+//  $(window).resize(() => {
+//    makeRain();
+//  });
 
   $('.skill-full').hide();
   let hasAnimatedSkills = false;

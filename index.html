@@ -8,18 +8,23 @@
   <script src="node_modules/jquery/dist/jquery.js"></script>
   <script src="script.js" type="text/javascript"></script>
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i|Roboto+Slab:100,300,400" rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="Content/PTFavicon.png"/>
 </head>
   
   
 <body>
   <div class="header">
-    <h3 id="logo">PEYTON TANZILLO</h3>
-    <ul class="header-links">
-      <a class="scroll-to-id" id="linkto-#about"><li>PROFILE</li></a>
-      <a class="scroll-to-id" id="linkto-#experience"><li>EXPERIENCE</li></a>
-      <a class="scroll-to-id" id="linkto-#skills"><li>SKILLS</li></a>
-      <a class="scroll-to-id" id="linkto-#contact"><li>CONTACT</li></a>
-    </ul>
+    <div class="logo-box">
+      <h3 id="logo">PEYTON TANZILLO</h3>
+    </div>
+    <div class="header-links-box">
+      <ul class="header-links">
+        <a class="scroll-to-id" id="linkto-#about"><li>PROFILE</li></a>
+        <a class="scroll-to-id" id="linkto-#experience"><li>EXPERIENCE</li></a>
+        <a class="scroll-to-id" id="linkto-#skills"><li>SKILLS</li></a>
+        <a class="scroll-to-id" id="linkto-#contact"><li>CONTACT</li></a>
+      </ul>
+    </div>
   </div>
 
   <!-- Main Cover / Home Area for Portfolio Site-->
@@ -31,42 +36,43 @@
   <div class="cover">
     <div id="cover-content">
       <h1 id="main-text">PEYTON TANZILLO</h1>
-      <h3 id="sub-text">Interactive Resumé</h3>
+      <!--<h3 id="sub-text">Interactive Resumé</h3>-->
     </div>
   </div>
   <div class="cover teal-overlay"></div>
   <div class="cover start-image"></div>
   <div class="cover" id="down-arrow-container">
     <a class="scroll-to-id" id="link-#about">
-    <div id="down-arrow-box">
-      <img id="down-arrow" src="Content/down-arrow.png">
-    </div>
+      <div id="down-arrow-box">
+        <img id="down-arrow" src="Content/down-arrow.png">
+      </div>
     </a>
   </div>
   <!-- About Section -->
   <div id="after-cover">
     <div id="about">
       <div class="title-band">
-        <h1 class="title title-right">PROFILE</h1>
+        <h1 class="title title-left">PROFILE</h1>
       </div>
       <div class="content-container">
         <div class="row">
           <div class="content-box">
             <h3 class="content-header">About Me</h3>
-            <div class="content-box-text">
+            <div class="content-box-text" id="about-me-box">
               <div class="image-container">
-                <img id="pt-image" src="Content/mysterious-me.JPG">
-                <div class="button-row">
-                  <a class="default-button" href="https://git.unl.edu/ptown16">GitLab</a>
-                  <a class="default-button" href="https://www.linkedin.com/in/peyton-tanzillo-2281b813/">LinkedIn</a>
-                </div>
+                <img id="pt-image" src="Content/seniorimg.jpg">
               </div>
               <p class="next-to-image">
-              &emsp;&emsp;Junior frontend developer seeking a software engineering internship for summer 2019 developing web based user interfaces. I have an eye for visual design and experience with HTML, CSS, Javascript, and jQuery. With my experience in a coding workplace, I am able to collaborate well with others and use constructive feedback to become a better person and employee. When I'm not coding, you'll usually find me playing Rocket League, making terrible music in Ableton, or creating 
+              Junior frontend developer seeking a software engineering internship for summer 2019 developing web based user interfaces. I have an eye for visual design and experience with HTML, CSS, Javascript, and jQuery. With my experience in a coding workplace, I am able to collaborate well with others and use constructive feedback to become a better person and employee. When I'm not coding, you'll usually find me playing Rocket League, making terrible music in Ableton, or creating 
               visual work in Adobe Illustrator, Photoshop, or After Effects.<br>
               </p>
             </div>
           </div>
+        </div>
+        <div class="row">
+          <p id="view-recent">
+            View Recent Work (Including this website):<a class="default-button" style="margin: 0 10px;" href="https://git.unl.edu/ptown16">GitLab</a>
+          </p>
         </div>
         <div class="row">
           <div class="content-box">
@@ -98,7 +104,9 @@
       <div class="content-container">
         <div class="row">
           <div class="small-header">
-            <h2>CAREER</h2>
+            <div class="small-header-text">
+              <h2>CAREER</h2>
+            </div>
           </div>
         </div>
         <div class="row">
@@ -123,6 +131,8 @@
               <ul>
                 <li>Ordered and delivered items (mostly food) from a broad array of vendors to customers.</li>
                 <li>Worked closely with Favor UX experts designers to improve the user interface and workflow of the Favor runner app to minimize delivery errors and delays for the fleet of Favor Runners.</li>
+                &nbsp;<br>
+                <a class="default-button" href="https://favordelivery.com/">View Favor Delivery's Website</a>
               </ul>
             </div>
           </div>
@@ -133,14 +143,16 @@
             <h4 class="job-extra">June 2016 - August 2016 (Austin, Texas)</h4> 
             <div class="content-box-text">
               <ul>
-                <li>Ensured customer satisfaction, kept stock of ingredients, cooked food, and cleaned dishes to support and efficient kitchen and high quality customer experience.</li>
+                <li>Ensured customer satisfaction, kept stock of ingredients, cooked food, and cleaned dishes to support an efficient kitchen and high quality customer experience.</li>
               </ul>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="small-header">
-            <h2>STUDENT</h2>
+            <div class="small-header-text">
+              <h2>STUDENT</h2>
+            </div>
           </div>
         </div>
         <div class="row">
@@ -159,7 +171,7 @@
     </div>
     <div id="skills">
       <div class="title-band">
-        <h1 class="title title-right">SKILLS</h1>
+        <h1 class="title title-left">SKILLS</h1>
       </div>
       <div class="content-container">
         <div class="row">
@@ -181,10 +193,9 @@
             <div class="content-box-text dark">
               <div class="skill"><h3 class="skill-name">Illustrator</h3><div class="skill-bar"><div class="skill-full eighty-pct"></div></div></div>
               <div class="skill"><h3 class="skill-name">Photoshop</h3><div class="skill-bar"><div class="skill-full eighty-pct"></div></div></div>
-              <div class="skill"><h3 class="skill-name">Rocket League</h3><div class="skill-bar"><div class="skill-full eighty-pct"></div></div></div>
               <div class="skill"><h3 class="skill-name">After Effects</h3><div class="skill-bar"><div class="skill-full sixty-pct"></div></div></div>
               <div class="skill"><h3 class="skill-name">Ableton</h3><div class="skill-bar"><div class="skill-full twenty-pct"></div></div></div>
-              <div class="skill"><h3 class="skill-name">Video Games</h3><div class="skill-bar"></div></div>
+              <div class="skill"><h3 class="skill-name">Unity</h3><div class="skill-bar"><div class="skill-full twenty-pct"></div></div></div>
             </div>
           </div>
         </div>
