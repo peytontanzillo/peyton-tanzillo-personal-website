@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Peyton Tanzillo Interactive Resume</title>
+  <meta charset="utf-8"/>
+  <link href="style.css" rel="stylesheet">
+  <script src="node_modules/jquery/dist/jquery.js"></script>
+  <script src="script.js" type="text/javascript"></script>
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i|Roboto+Slab:100,300,400" rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="Content/PTFavicon.png"/>
+</head>
+
+
+<body>
+  <div class="header">
+    <div class="logo-box">
+      <h3 id="logo">PEYTON TANZILLO</h3>
+    </div>
+    <div class="header-links-box">
+      <ul class="header-links">
+        <a class="scroll-to-id" id="linkto-#about"><li>PROFILE</li></a>
+        <a class="scroll-to-id" id="linkto-#experience"><li>EXPERIENCE</li></a>
+        <a class="scroll-to-id" id="linkto-#skills"><li>SKILLS</li></a>
+        <a class="scroll-to-id" id="linkto-#contact"><li>CONTACT</li></a>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Main Cover / Home Area for Portfolio Site-->
+  <div class="cover">
+    <div id="raindrops">
+    </div>
+  </div>
+  <div class="cover">
+    <div id="cover-content">
+      <h1 id="main-text">PEYTON TANZILLO</h1>
+      <!--<h3 id="sub-text">Interactive Resumé</h3>-->
+    </div>
+  </div>
+  <div class="cover teal-overlay"></div>
+  <div class="cover start-image"></div>
+  <div class="cover" id="down-arrow-container">
+    <a class="scroll-to-id" id="link-#about">
+      <div id="down-arrow-box">
+        <img id="down-arrow" src="Content/down-arrow.png">
+      </div>
+    </a>
+  </div>
+  <!-- About Section -->
+  <div id="after-cover">
+    <div id="about">
+      <div class="title-band">
+        <h1 class="title title-left">PROFILE</h1>
+      </div>
+      <div class="content-container">
+        <div class="row">
+          <div class="content-box">
+            <h3 class="content-header">About Me</h3>
+            <div class="content-box-text" id="about-me-box">
+              <div class="image-container">
+                <img id="pt-image" src="Content/seniorimg.jpg">
+              </div>
+              <p class="next-to-image">
+              I am a junior frontend developer seeking a software engineering internship for summer 2019 developing web based user interfaces. I have an eye for visual design and experience with HTML, CSS, Javascript, and jQuery. With my experience in a coding workplace, I am able to collaborate well with others and use constructive feedback to become a better person and employee. When I'm not coding, you'll usually find me playing Rocket League, making terrible music in Ableton, or creating
+              visual work in Adobe Illustrator, Photoshop, or After Effects.<br>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <p id="view-recent">
+            View Recent Work (Including this website):<a class="default-button" style="margin: 0 10px;" href="https://git.unl.edu/ptown16">GitLab</a>
+          </p>
+        </div>
+        <div class="row">
+          <div class="content-box">
+            <h3 class="content-header">Background</h3>
+            <div class="content-box-text dark">
+              <div class="key"><span class="dark-em">Name:</span><span class="val">Peyton Tanzillo</span><br></div>
+              <div class="key"><span class="dark-em">Age:</span><span class="val">19 years old</span><br></div>
+              <div class="key"><span class="dark-em">Hometown:</span><span class="val">Austin, Texas</span><br></div>
+              <div class="key"><span class="dark-em">High School:</span><span class="val">The Griffin School</span><br></div>
+            </div>
+          </div>
+          <div class="content-box">
+            <h3 class="content-header">Education</h3>
+            <div class="content-box-text dark">
+              <div class="key"><span class="dark-em">College:</span><span class="val">University of Nebraska-Lincoln</span><br></div>
+              <div class="key"><span class="dark-em">Major:</span><span class="val">Software Engineering</span><br></div>
+              <div class="key"><span class="dark-em">Minor:</span><span class="val">Music Technology</span><br></div>
+              <div class="key"><span class="dark-em">Graduation Year:</span><span class="val">2021</span><br></div>
+              <div class="key"><span class="dark-em">GPA:</span><span class="val">3.58</span><br></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="experience">
+      <div class="title-band">
+        <h1 class="title title-left">EXPERIENCE</h1>
+      </div>
+      <div class="content-container">
+        <div class="row">
+          <div class="small-header">
+            <div class="small-header-text">
+              <h2>CAREER</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="content-box">
+            <h3 class="content-header">UNL Chemistry Department&emsp;<span class="job-title">Web Developer</span></h3>
+            <h4 class="job-extra">February 2018 - Present (Lincoln, Nebraska)</h4>
+            <div class="content-box-text">
+              <ul>
+                <li>Design and develop responsive webpages using Drupal, HTML, CSS, Javascript, and jQuery.</li>
+                <li>Maintain UNL chemistry website to accurately reflect the current status of the department.</li>
+                &nbsp;<br>
+                <a class="default-button" href="https://chem.unl.edu/current-graduate">View a Sample Webpage</a>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="content-box">
+            <h3 class="content-header">Favor Delivery&emsp;<span class="job-title">UX Tester and Favor Runner</span></h3>
+            <h4 class="job-extra">May 2018 - August 2018 (Austin, Texas)</h4>
+            <div class="content-box-text">
+              <ul>
+                <li>Ordered and delivered items (mostly food) from a broad array of vendors to customers.</li>
+                <li>Worked closely with Favor UX experts designers to improve the user interface and workflow of the Favor runner app to minimize delivery errors and delays for the fleet of Favor Runners.</li>
+                &nbsp;<br>
+                <a class="default-button" href="https://favordelivery.com/">View Favor Delivery's Website</a>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="content-box">
+            <h3 class="content-header">Graphic Design Freelance Work&emsp;<span class="job-title"></span></h3>
+            <h4 class="job-extra">June 2016 - August  (Various Locations)</h4>
+            <div class="content-box-text">
+              <ul>
+                <li>Negotiated with customers to get a fair price for the time spent on graphic design work.</li>
+                <li>Managed my design workload and my school workload to provide quality graphics in a timely fashion.</li>
+                &nbsp;<br>
+                <a class="default-button" href="https://favordelivery.com/">View My Past Work</a>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="content-box">
+            <h3 class="content-header">Burger Tex&emsp;<span class="job-title">Busser</span></h3>
+            <h4 class="job-extra">June 2016 - August 2016 (Austin, Texas)</h4>
+            <div class="content-box-text">
+              <ul>
+                <li>Ensured customer satisfaction, kept stock of ingredients, cooked food, and cleaned dishes to support an efficient kitchen and high quality customer experience.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="small-header">
+            <div class="small-header-text">
+              <h2>STUDENT</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="content-box">
+            <h3 class="content-header">UNL Rocket League Club&emsp;<span class="job-title">Founder and President</span></h3>
+            <h4 class="job-extra">September 2018 - Present (Lincoln, Nebraska)</h4>
+            <div class="content-box-text">
+              <ul>
+                <li>Oversee competitive teams in various inter-collegiate tournaments.</li>
+                <li>Arrange UNL Rocket League events, such as watch parties and local LAN tournaments, by coordinating prominent club members.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="skills">
+      <div class="title-band">
+        <h1 class="title title-left">SKILLS</h1>
+      </div>
+      <div class="content-container">
+        <div class="row">
+          <div class="content-box">
+            <h3 class="content-header">Programming Skills</h3>
+            <div class="content-box-text dark">
+              <div class="skill"><h3 class="skill-name">HTML</h3><div class="skill-bar"><div class="skill-full eighty-pct"></div></div></div>
+              <div class="skill"><h3 class="skill-name">CSS</h3><div class="skill-bar"><div class="skill-full eighty-pct"></div></div></div>
+              <div class="skill"><h3 class="skill-name">Javascript</h3><div class="skill-bar"><div class="skill-full eighty-pct"></div></div></div>
+              <div class="skill"><h3 class="skill-name">jQuery</h3><div class="skill-bar"><div class="skill-full eighty-pct"></div></div></div>
+              <div class="skill"><h3 class="skill-name">GitLab</h3><div class="skill-bar"><div class="skill-full eighty-pct"></div></div></div>
+              <div class="skill"><h3 class="skill-name">Python</h3><div class="skill-bar"><div class="skill-full sixty-pct"></div></div></div>
+              <div class="skill"><h3 class="skill-name">Java</h3><div class="skill-bar"><div class="skill-full fourty-pct"></div></div></div>
+              <div class="skill"><h3 class="skill-name">React</h3><div class="skill-bar"><div class="skill-full twenty-pct"></div></div></div>
+            </div>
+          </div>
+          <div class="content-box">
+            <h3 class="content-header">Other Skills</h3>
+            <div class="content-box-text dark">
+              <div class="skill"><h3 class="skill-name">Illustrator</h3><div class="skill-bar"><div class="skill-full eighty-pct"></div></div></div>
+              <div class="skill"><h3 class="skill-name">Photoshop</h3><div class="skill-bar"><div class="skill-full eighty-pct"></div></div></div>
+              <div class="skill"><h3 class="skill-name">After Effects</h3><div class="skill-bar"><div class="skill-full sixty-pct"></div></div></div>
+              <div class="skill"><h3 class="skill-name">Ableton</h3><div class="skill-bar"><div class="skill-full twenty-pct"></div></div></div>
+              <div class="skill"><h3 class="skill-name">Unity</h3><div class="skill-bar"><div class="skill-full twenty-pct"></div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="contact">
+      <div class="title-band">
+        <h1 class="title title-left">CONTACT</h1>
+      </div>
+      <div class="contact-band">
+        <div class="content-container footer">
+          <div class="row icon-row">
+            <div class="icon-sub-row">
+              <div class="icon-box">
+                <a href="mailto:peyton.tanzillo@huskers.unl.edu"><img class="icon" src="Content/icons/001-mail.svg"></a>
+                <h5 class="icon-subhead">Email</h5>
+              </div>
+              <div class="icon-box">
+                <a href="tel:5124849318"><img class="icon" src="Content/icons/002-cellphone.svg"></a>
+                <h5 class="icon-subhead">Phone</h5>
+              </div>
+            </div>
+            <div class="icon-sub-row">
+              <div class="icon-box">
+                <a href="https://goo.gl/maps/9t6EpR6dLUF2"><img class="icon" src="Content/icons/005-pin.svg"></a>
+                <h5 class="icon-subhead">Address</h5>
+              </div>
+              <div class="icon-box">
+                <a href="https://www.linkedin.com/in/peyton-tanzillo-2281b813/"><image class="icon" src="Content/icons/004-linkedin-logo-button.svg"></image></a>
+                <h5 class="icon-subhead">LinkedIn</h5>
+              </div>
+            </div>
+          </div>
+          <p class="contact-end">Icons made by <a href="https://www.flaticon.com/authors/chanut">Chanut</a> and <a href="https://www.flaticon.com/authors/bogdan-rosu">Bogdan Rosu</a> from Flaticon</p>
+          <p class="contact-end">Website inspired by <a href="http://www.pascalvangemert.nl/">Pascal van Gemert's Interactive resumé</a></p>
+          <p class="contact-end">© 2018 Peyton Tanzillo</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

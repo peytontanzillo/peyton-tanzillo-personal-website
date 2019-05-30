@@ -1,0 +1,621 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Slab', serif;
+}
+
+/* ================
+CSS for Cover Page
+================ */
+
+/* ---CSS for Navbar--- */
+
+.header {
+  height: 50px;
+  background-color: #222;
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  z-index: 10;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.header > * {
+  display: inline-block;
+  margin: 80px;
+  font-weight: 400; 
+  color: white;
+}
+
+.logo-box {
+  display: flex;
+  float: left;
+  height: 100%;
+  margin: 0 0 0 80px;
+  font-size: 25px;
+  font-weight: 700;
+  color: white;
+}
+
+#logo {
+  margin: auto;
+  text-align: center;
+}
+
+.header-links-box {
+  display: flex;
+  float: right;
+  margin: 0;
+  padding: 0px 80px 0 0;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.header-links {
+  text-decoration: none;
+  display: inline-block;
+  height: 100%;
+  text-align: center;
+}
+
+.header-links > a {
+  display: inline-flex;
+  color: white;
+  -webkit-transition: .3s; /* Safari */
+  transition: .3s;
+  height: 100%;
+}
+
+.header-links > a > li {
+  margin: auto;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  padding: 13px 10px 0 10px;
+  margin: 0 0 -15px 0;
+  box-sizing: border-box;
+  height: 100%;
+  bottom: 0;
+  -webkit-transition: .3s; /* Safari */
+  transition: .3s;
+}
+
+.header-links > a > li:hover {
+  background-color: white;
+  color: #222;
+  cursor: pointer;
+}
+
+/* ---CSS for Cover itself--- */
+
+.cover {
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  overflow: hidden;
+}
+
+.teal-overlay {
+  background-color: rgba(0, 139, 139, .6);
+  z-index: 2;
+}
+
+.start-image {
+  background: url('Content/bushbanner.jpg') no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 1;
+}
+
+/* ---CSS for text on cover--- */
+
+#cover-content {
+  position: absolute;
+  display: inline-block;
+  z-index: 4;
+  top: 40%;
+  left: 50%;
+  width: 800px;
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+#main-text {
+  position: relative;
+  font-size: 60px;
+  color: white;
+  background-color: #222;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  z-index: 5;
+}
+
+#sub-text {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  position: relative;
+  font-size: 30px;
+  color: #222;
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+  width: 50%;
+  float: right;
+  z-index: 4;
+}
+
+/* ---CSS for rain on cover--- */
+
+.drop {
+  background-color: rgba(0, 80, 80, .5);
+  display: block;
+  z-index: 3;
+}
+
+#raindrops {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 3;
+}
+
+/* ---CSS for down arrow--- */
+
+#down-arrow {
+  position: absolute;
+  max-width: 50px;
+  max-height: 50px; 
+  padding: 10px 25px;
+  z-index: 6;
+}
+
+#down-arrow-box {
+  position: absolute;
+  display: inline-block;
+  background-color: #222;
+  height: 70px;
+  width: 100px;
+  bottom: 0;
+  margin: 0px 80px;
+  z-index: 5;
+}
+
+#down-arrow-box:hover {
+  background-color: rgb(0, 160, 160);
+  -webkit-transition: .3s; /* Safari */
+  transition: .3s;
+  cursor: pointer;
+}
+
+/* ================
+CSS for About Page
+================ */
+
+#after-cover {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  z-index: 6;
+}
+
+/* ---CSS for title bands--- */
+
+.title-band {
+  display: flex;
+  width: 100%;
+  background-color: #222;
+  height: 200px;
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  position: absolute;
+  display: inline-block;
+  color: white;
+  top: 0;
+  height: 100%;
+  margin: auto;
+  text-align: center;
+  font-size: 1000%;
+  font-weight: 400;
+}
+
+.title-right {
+  right: 80px;
+}
+
+.title-left {
+  left: 80px;
+}
+
+/* ---CSS for content itself (including support for image)--- */
+
+#pt-image {
+  max-height: 188px;
+  max-width: 188px;
+  border: 1px solid #222;
+  margin: 20px;
+  margin-left: 0;
+}
+
+.next-to-image {
+  width: 100%;
+  padding: 20px 0px;
+}
+
+.content-header {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 30px;
+  margin: 10px;
+  border-bottom: 1px solid #222;
+}
+
+.content-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px 160px;
+  background-color: white;
+}
+
+.content-box-text {
+  box-sizing: border-box;
+  font-size: 18px;
+  background-color: #eee;
+  color: #222;
+  padding: 30px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.content-box-text > ul {
+  padding-left: 20px;
+}
+
+#about-me-box {
+  padding-top: 0;
+}
+
+#view-recent {
+  font-size: 18px;
+  text-align: center;
+  font-weight: 800;
+  margin: 10px;
+  padding: 10px;
+  background-color: rgb(0, 160, 160);
+  color: white;
+  width: 100%;
+}
+
+#view-recent > .default-button {
+  background-color: white;
+  color: #222;
+}
+
+.image-container {
+  display: relative;
+  float: left;
+}
+
+.button-row {
+  display: inline-block;
+  margin: 0 15px;
+  width: 180px;
+  text-align: center;
+}
+
+.content-box {
+  padding: 0 10px;
+  flex-basis: 0;
+  flex-grow: 1;
+  overflow: hidden;
+  flex: 395px;
+}
+
+/* ---CSS for Background / Education--- */
+
+.dark {
+  display: block;
+  background-color: #222;
+  color: white;
+}
+
+.dark-em {
+  font-weight: 700;
+  color: rgb(0, 160, 160);
+  float: left;
+}
+
+.key {
+  border-bottom: 1px dotted white;
+  margin: 5px;
+  width: 100%;
+}
+
+.val {
+  float: right;
+}
+
+.right {
+  right: 0;
+}
+
+.row {
+  width: 100%;
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-content: stretch;
+  overflow: hidden;
+}
+
+
+.default-button {
+  background-color: rgb(0, 160, 160);
+  color: white;
+  display: inline-block;
+  padding: .5em;
+  font-size: 15px;
+  border-radius: .5em;
+  cursor: pointer;
+  text-decoration: none;
+  height: 20px;
+}
+
+.job-title {
+  position: relative;
+  display: inline-block;
+  font-weight: 100;
+  font-size: 20px;
+  text-align: right;
+}
+
+.job-extra {
+  color: rgb(0, 160, 160);
+  padding: 10px;
+  padding-top: 0;
+}
+
+.small-header {
+  display: flex;
+  background-color: #222;
+  height: 50px;
+  padding-bottom: 2px;
+  padding-left: 20px;
+  margin-top: 30px;
+  color: white;
+  width: 100%;
+}
+
+.small-header-text {
+  float: left;
+  font-size: 25px;
+}
+
+.small-header-text > h2 {
+  margin: auto;
+  text-align: center;
+}
+
+.skill {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 10px 0px;
+  border-bottom: 1px dotted white;
+}
+
+.skill-name {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 50%;
+  font-size: 20px;
+}
+
+.skill-bar {
+  display: inline-block;
+  background-color: white;
+  width: 45%;
+  height: 19px;
+  float: right;
+  border: 3px solid white;
+}
+
+.skill-full {
+  display: inline-block;
+  background-color: rgb(0, 160, 160);
+  height: 19px;
+  float: left;
+}
+
+.twenty-pct {
+  width: 20%;
+}
+
+.fourty-pct {
+  width: 40%;
+}
+
+.sixty-pct {
+  width: 60%;
+}
+
+.eighty-pct {
+  width: 80%;
+}
+
+.hundred-pct {
+  width: 100%;
+}
+
+.contact-band {
+  background-color: #222;
+}
+
+.contact-end {
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+
+.contact-end > a {
+  color: rgb(0, 160, 160);
+}
+
+.icon-box {
+  padding: 10px 0px;
+  text-align: center;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex: 150px;
+}
+
+.icon {
+  width: 120px;
+  height: 120px;
+  justify-content: center;
+}
+
+.icon-subhead {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 25px;
+  color: rgb(0, 160, 160);
+  justify-content: center;
+}
+
+.icon-text {
+  font-size: 15px;
+  color: white;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.icon-text > a {
+  color: white;
+}
+
+.fourth {
+  width: 25%;
+}
+
+.icon-row {
+  border-bottom: 1px dashed white;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+.icon-sub-row {
+  flex-basis: 0;
+  flex-grow: 1;
+  flex: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: stretch;
+}
+
+.footer {
+  background-color: #222;
+}
+
+@media (max-width: 1150px) {
+    
+  .content-container {
+    padding: 40px 120px;
+  }
+    
+  .title {
+    font-size: 100px;
+    bottom: -27px; 
+  }
+    
+  .title-band {
+    height: 150px;
+  }
+    
+  .icon-subhead {
+    font-size: 17px;
+  }
+    
+}
+
+@media (max-width: 900px) {
+    
+  .content-container {
+    padding: 40px 100px;
+  }
+    
+  .logo-box {
+    margin: 0 0 0 40px;
+  }
+    
+  .header-links-box {
+    padding: 0px 40px 0 0;
+  }
+    
+  .header-links > a > li {
+    font-size: 15px;
+  }
+    
+  #cover-content {
+    width: 500px;
+  }
+    
+  #main-text {
+    font-size: 40px;
+  }
+
+  #sub-text {
+    font-size: 20px;
+  }
+    
+  .content-header {
+    font-size: 24px;
+  }
+    
+  .job-title {
+    font-size: 14px;
+  }
+    
+  .icon-text {
+    font-size: 12px;
+  }  
+}
+
+@media (max-width: 720px) {
+    
+  .cover {
+    height: 50%;
+  }
+    
+  #after-cover {
+    top: 50%;
+  }
+    
+  .content-container {
+    padding: 40px 80px;
+  }
+    
+  .title {
+    font-size: 70px;
+    bottom: -19px; 
+  }
+    
+  .title-band {
+    height: 90px;
+  }
+    
+  .header-links {
+    display: none;
+  }
+    
+  #logo {
+    font-size: 25px;
+    margin: 24px 0 19px 40px;
+  }
+    
+}
