@@ -1,3 +1,4 @@
+// Values for Box Effect
 let CANVAS_HALF = undefined;
 let TOP_LEFT_POINT = undefined;
 let TOP_RIGHT_POINT = undefined;
@@ -10,17 +11,17 @@ let canvas = undefined;
 let ctx = undefined;
 
 const colorPallete = {
-  top: '#333333',
-  left: '#444444',
-  right: '#555555',
-  bottom: '#666666',
-  middle: '#777777',
+  top: '#111111',
+  left: '#222222',
+  right: '#282828',
+  bottom: '#333333',
+  middle: '#444444',
 };
 
-const MOUSE_FOLLOW_INTENSITY = 10;
+const MOUSE_FOLLOW_INTENSITY_RECT = 10;
 const RECTANGLE_DIVISOR = 2;
 
-function resizeWindow() {
+function resizeWindowBox() {
   ctx.canvas.width = window.innerWidth;
   ctx.canvas.height = window.innerHeight;
   CANVAS_HALF = {
@@ -95,26 +96,31 @@ function refreshCanvas(centerPos) {
   drawMiddle(centerPos, colorPallete.middle);
 }
 
-document.onmousemove = (event) => {
+function calculateMouse(event, intensity) {
+  const centerOffset = {
+    x: event.clientX - CANVAS_HALF.x,
+    y: event.clientY - CANVAS_HALF.y,
+  };
+  return {
+    x: CANVAS_HALF.x + (centerOffset.x / intensity),
+    y: CANVAS_HALF.y + (centerOffset.y / intensity),
+  };
+}
+
+function shiftBox(event) {
   if (canvas !== null) {
-    const centerOffset = {
-      x: event.clientX - CANVAS_HALF.x,
-      y: event.clientY - CANVAS_HALF.y,
-    };
-    const centerPos = {
-      x: CANVAS_HALF.x + (centerOffset.x / MOUSE_FOLLOW_INTENSITY),
-      y: CANVAS_HALF.y + (centerOffset.y / MOUSE_FOLLOW_INTENSITY),
-    };
-    refreshCanvas(centerPos);
+    const rectCenter = calculateMouse(event, MOUSE_FOLLOW_INTENSITY_RECT);
+    refreshCanvas(rectCenter);
   }
-};
+}
 
-window.onload = () => {
+function loadCanvas() {
   canvas = document.getElementById('background-room');
-
   ctx = canvas.getContext('2d');
-  resizeWindow();
-  window.addEventListener('resize', resizeWindow);
-
+  resizeWindowBox();
+  window.addEventListener('resize', resizeWindowBox);
   refreshCanvas(CANVAS_HALF);
-};
+}
+
+window.addEventListener('mousemove', shiftBox);
+window.addEventListener('load', loadCanvas);
