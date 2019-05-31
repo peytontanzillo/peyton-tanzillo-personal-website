@@ -1,4 +1,5 @@
 const names = document.getElementsByClassName('name-effect');
+const below = document.getElementsByClassName('below-name');
 
 let TEXT_CENTER = {
   top: undefined,
@@ -10,26 +11,29 @@ let SCREEN_CENTER = {
   left: undefined,
 };
 
-const TEXT_SHIFT_INTENSITY = 80;
+const TEXT_SHIFT_INTENSITY = 78;
 
 function resizeWindow() {
   TEXT_CENTER = {
     top: (window.innerHeight - names[0].offsetHeight) / 2,
     left: (window.innerWidth - names[0].offsetWidth) / 2,
   };
+  if (below !== null) {
+    const belowTop = (window.innerHeight / 2) + (names[0].offsetHeight / 2);
+    const belowLeft = (window.innerWidth - below[0].offsetWidth) / 2;
+    below[0].style.top = `${belowTop}px`;
+    below[0].style.left = `${belowLeft}px`;
+    console.log(below);
+  }
+
   SCREEN_CENTER = {
     top: window.innerHeight / 2,
     left: window.innerWidth / 2,
   };
-  console.log(TEXT_CENTER);
   for (let i = 0; i < names.length; i++) {
     names[i].style.top = `${TEXT_CENTER.top}px`;
     names[i].style.left = `${TEXT_CENTER.left}px`;
   }
-}
-
-function loadText() {
-  resizeWindow();
 }
 
 function generateOffset(event) {
@@ -52,10 +56,9 @@ function displayText(offset) {
 
 function moveText(event) {
   const textOffset = generateOffset(event);
-  console.log(textOffset);
   displayText(textOffset);
 }
 
-window.addEventListener('load', loadText);
+window.addEventListener('load', resizeWindow);
 window.addEventListener('resize', resizeWindow);
 window.addEventListener('mousemove', moveText);

@@ -21,35 +21,6 @@ const colorPallete = {
 const MOUSE_FOLLOW_INTENSITY_RECT = 10;
 const RECTANGLE_DIVISOR = 2;
 
-function resizeWindowBox() {
-  ctx.canvas.width = window.innerWidth;
-  ctx.canvas.height = window.innerHeight;
-  CANVAS_HALF = {
-    x: canvas.width / 2,
-    y: canvas.height / 2,
-  };
-  TOP_LEFT_POINT = {
-    x: 0,
-    y: 0,
-  };
-  TOP_RIGHT_POINT = {
-    x: canvas.width,
-    y: 0,
-  };
-  BOTTOM_LEFT_POINT = {
-    x: 0,
-    y: canvas.height,
-  };
-  BOTTOM_RIGHT_POINT = {
-    x: canvas.width,
-    y: canvas.height,
-  };
-  RECTANGLE_SIZE = {
-    width: canvas.width / RECTANGLE_DIVISOR,
-    height: canvas.height / RECTANGLE_DIVISOR,
-  };
-}
-
 function drawTriangle(center, point1, point2, color) {
   ctx.fillStyle = color;
   ctx.beginPath();
@@ -114,13 +85,43 @@ function shiftBox(event) {
   }
 }
 
+function resizeWindowBox() {
+  ctx.canvas.width = window.innerWidth;
+  ctx.canvas.height = window.innerHeight;
+  CANVAS_HALF = {
+    x: canvas.width / 2,
+    y: canvas.height / 2,
+  };
+  TOP_LEFT_POINT = {
+    x: 0,
+    y: 0,
+  };
+  TOP_RIGHT_POINT = {
+    x: canvas.width,
+    y: 0,
+  };
+  BOTTOM_LEFT_POINT = {
+    x: 0,
+    y: canvas.height,
+  };
+  BOTTOM_RIGHT_POINT = {
+    x: canvas.width,
+    y: canvas.height,
+  };
+  RECTANGLE_SIZE = {
+    width: canvas.width / RECTANGLE_DIVISOR,
+    height: canvas.height / RECTANGLE_DIVISOR,
+  };
+  refreshCanvas(CANVAS_HALF);
+}
+
 function loadCanvas() {
   canvas = document.getElementById('background-room');
   ctx = canvas.getContext('2d');
   resizeWindowBox();
-  window.addEventListener('resize', resizeWindowBox);
   refreshCanvas(CANVAS_HALF);
 }
 
+window.addEventListener('resize', resizeWindowBox);
 window.addEventListener('mousemove', shiftBox);
 window.addEventListener('load', loadCanvas);

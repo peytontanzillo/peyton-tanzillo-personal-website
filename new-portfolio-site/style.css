@@ -1,3 +1,9 @@
+:root {
+  --first-highlight: #FFC75B;
+  --second-highlight: #FC6A7A;
+  --third-highlight: #91479F;
+}
+
 /* Background Canvas */
 #background-room {
   position: fixed;
@@ -58,6 +64,7 @@
   display: flex;
   top: 0;
   width: 15vw;
+  cursor: pointer;
 }
 
 .slider-item {
@@ -88,15 +95,15 @@
 }
 
 #about > .slider-background {
-  background-color: cyan;
+  background-color: var(--first-highlight);
 }
 
 #portfolio > .slider-background {
-  background-color: magenta;
+  background-color: var(--second-highlight);
 }
 
 #contact > .slider-background {
-  background-color: yellow;
+  background-color: var(--third-highlight);
 }
 
 /* Starting Banner */
@@ -122,29 +129,40 @@
 }
 
 .name-effect:nth-child(2) {
-  color: cyan;
+  color: var(--first-highlight);
   z-index: 7;
   animation: fade-in 1s forwards;
   animation-delay: .4s;
   opacity: 0;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
 }
 
 .name-effect:nth-child(3) {
-  color: magenta;
+  color: var(--second-highlight);
   z-index: 6;
   animation: fade-in 1s forwards;
   animation-delay: .8s;
   opacity: 0;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
 }
 
 .name-effect:nth-child(4) {
-  color: yellow;
+  color: var(--third-highlight);
   z-index: 5;
   animation: fade-in 1s forwards;
   animation-delay: 1.2s;
   opacity: 0;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
 }
-
 
 @keyframes fade-in {
   0% {
@@ -153,4 +171,27 @@
   100% {
     opacity: 1;
   }
+}
+
+.below-name {
+  font-family: 'Abel', sans-serif;
+  font-size: 3vw;
+  color: white;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  z-index: 8;
+}
+
+.first-color {
+  color: var(--first-highlight);
+}
+
+.second-color {
+  color: var(--second-highlight);
+}
+
+.third-color {
+  color: var(--third-highlight);
 }
