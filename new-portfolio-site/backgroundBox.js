@@ -7,6 +7,8 @@ let BOTTOM_RIGHT_POINT = undefined;
 
 let RECTANGLE_SIZE = undefined;
 
+const RECTANGLE_DIVISOR = 2;
+
 let canvas = undefined;
 let ctx = undefined;
 
@@ -19,7 +21,6 @@ const colorPallete = {
 };
 
 const MOUSE_FOLLOW_INTENSITY_RECT = 10;
-const RECTANGLE_DIVISOR = 2;
 
 function drawTriangle(center, point1, point2, color) {
   ctx.fillStyle = color;
@@ -68,13 +69,19 @@ function refreshCanvas(centerPos) {
 }
 
 function calculateMouse(event, intensity) {
-  const centerOffset = {
-    x: event.clientX - CANVAS_HALF.x,
-    y: event.clientY - CANVAS_HALF.y,
-  };
+  if (CANVAS_HALF !== undefined) {
+    const centerOffset = {
+      x: event.clientX - CANVAS_HALF.x,
+      y: event.clientY - CANVAS_HALF.y,
+    };
+    return {
+      x: CANVAS_HALF.x + (centerOffset.x / intensity),
+      y: CANVAS_HALF.y + (centerOffset.y / intensity),
+    };
+  }
   return {
-    x: CANVAS_HALF.x + (centerOffset.x / intensity),
-    y: CANVAS_HALF.y + (centerOffset.y / intensity),
+    x: 0,
+    y: 0,
   };
 }
 

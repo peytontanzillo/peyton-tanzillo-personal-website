@@ -6,8 +6,10 @@
       <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
       <script type="text/javascript" src="textEffect.js"></script>
       <script type="text/javascript" src="backgroundBox.js"></script>
+      <script type="text/javascript" src="pageManager.js"></script>
     </head>
     <body>
+
       <!-- Fixed Items -->
         <canvas id="background-room"></canvas>
         <ul id="header">
@@ -24,12 +26,35 @@
             <div class="slider-item">CONTACT</div>
           </li>
         </ul>
-        <div class="fullscreen-name">
-          <h1 class="name-effect">Peyton Tanzillo</h1>
-          <h1 class="name-effect">Peyton Tanzillo</h1>
-          <h1 class="name-effect">Peyton Tanzillo</h1>
-          <h1 class="name-effect">Peyton Tanzillo</h1>
-          <h3 class="below-name"><span class="first-color">Programmer</span>, <span class="second-color">Designer</span>, and <span class="third-color">Creator</span></h3>
+
+      <!-- Home Page -->
+        <div id="home-page" class="page">
+          <div class="fullscreen-name">
+            <h1 class="name-effect">Peyton Tanzillo</h1>
+            <h1 class="name-effect">Peyton Tanzillo</h1>
+            <h1 class="name-effect">Peyton Tanzillo</h1>
+            <h1 class="name-effect">Peyton Tanzillo</h1>
+            <h3 class="below-name"><span class="first-color">Programmer</span>, <span class="second-color">Designer</span>, and <span class="third-color">Creator</span></h3>
+          </div>
+        </div>
+
+      <!-- Default Other Page Items -->
+        <div id="expanding-background" class="page-background"></div>
+        <div id="home" class="header-item hidden">< BACK HOME</div>
+
+      <!-- About Page -->
+        <div id="about-page" class="page">
+          <div class="slide-in bg-first-color"><h1>About</h1></div>
+        </div>
+
+      <!-- Portfolio Page -->
+        <div id="portfolio-page" class="page">
+          <div class="slide-in bg-second-color"><h1>Portfolio</h1></div>
+        </div>
+
+      <!-- Contact Page -->
+        <div id="contact-page" class="page">
+          <div class="slide-in bg-third-color"><h1>Contact</h1></div>
         </div>
         <!--<div id="loading">
             <svg id="logo-animated" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="250" height="250">

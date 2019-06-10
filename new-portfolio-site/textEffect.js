@@ -23,7 +23,6 @@ function resizeWindow() {
     const belowLeft = (window.innerWidth - below[0].offsetWidth) / 2;
     below[0].style.top = `${belowTop}px`;
     below[0].style.left = `${belowLeft}px`;
-    console.log(below);
   }
 
   SCREEN_CENTER = {
